@@ -1,0 +1,20 @@
+<launch>
+  <node name="sensor_imu_uart" pkg="Sensor_IMU_uart" type="Sensor_IMU_uart" output="screen">
+    <param name="UART_NUM" value="0" />
+    <param name="SET_BAUDRATE" value="5" />
+    <param name="SET_OUTPUT_RATE" value="0" />
+    <param name="SET_OUTPUT_FORMAT" value="2" />
+    <param name="SET_OUTPUT_GYRO" value="1" />
+    <param name="SET_OUTPUT_ACCELERO" value="4" />
+    <!-- <param name="SET_OUTPUT_DISTANCE" value="0" /> -->
+    <!-- <param name="SET_SENS_GYRO" value="5" /> -->
+    <!-- <param name="SET_SENS_ACCELERO" value="3" /> -->
+    <!-- <param name="SET_Low_Pass_Filter_Gyroscope" value="3" /> -->
+    <!-- <param name="SET_Low_Pass_Filter_Accelerometer" value="5" /> -->
+    <!-- <param name="POWER_ON_START" value="1" /> -->
+    <param name="ros_rate" value="30"/>
+    <param name="regex_pattern" value="(([-+]?\d*\.\d+)|\d+)" />;
+  </node>
+
+  <!-- <node name="settings_script" pkg="serialIMU" type="initialSettings.sh" output="screen"/> -->
+</launch>
